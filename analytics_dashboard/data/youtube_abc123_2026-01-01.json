@@ -1,0 +1,14 @@
+    {
+  "platform": "youtube",
+  "content_id": "abc123",
+  "timestamp": "2026-01-01T12:00:00Z",
+  "metrics": {
+    "views": 1200,
+    "watch_time": 3600,
+    "likes": 54,
+    "comments": 8,
+    "shares": 3,
+    "subscribers": 2
+  }
+}
+
