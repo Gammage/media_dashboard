@@ -1,4 +1,3 @@
-# CURRENTLY MAKING DUMPLINGS AND DINNER, AROUND FOR A CHAT BUT I LEAVE YOU WITH THIS IN THE MEANTIME LOL SRY :) 
 
 # Media Dashboard (WIP)
 
@@ -12,6 +11,13 @@ If you joined here from !project on twitch, heres the complete breakdown of what
     - If I am doing something wrong, that is part of learning.
 
 ## Stream event log
+
+### Remembering Fixtures, Refactoring tests, modifying class scope 09/01/2026
+    - this is a big one. so I had forgotten fixtures, which enables to store functions to be used across test functions. 
+    - refactoring my test files to be DRY. That is, tests are assertions only. seperate test file for each api, then eventually a test file for all of them
+    - So In the EventId, I was passing a paremeter for the metric attribute, then defining the actual attribute as an empty dictionary.
+        - Even worse, my tests weren't using fixtures, so they passed. I then decided to keep the empty dictionary attribute for future project scope.
+        - this still means an event can have a empty metric, with an attribute inside the metric class that enables a bidirectional link.
 
 ### Eventstore basics 07/01/2026
     - understanding how to create a class that will store multiple events (such as youtube video snapshots and their metrics)
