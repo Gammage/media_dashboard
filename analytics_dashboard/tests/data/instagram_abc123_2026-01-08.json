@@ -1,0 +1,14 @@
+{
+  "platform": "instagram",
+  "content_id": "abc123",
+  "timestamp": "2026-01-08T12:00:00Z",
+  "metrics": {
+    "views": 1850,
+    "watch_time": 5400,
+    "likes": 81,
+    "comments": 14,
+    "shares": 6,
+    "subscribers": 5
+  }
+}
+

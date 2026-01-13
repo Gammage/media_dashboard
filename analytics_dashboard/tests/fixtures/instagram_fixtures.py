@@ -1,9 +1,10 @@
 import pytest
-from fixtures.youtube_fixtures import instagram_json, instagram_snapshot, metric_yt
+from src.models.events_metrics import Eventid, Metric 
 
 from pathlib import Path
 import json
 
+from src.models.eventstore import Event_store
 
 @pytest.fixture
 def instagram_json():

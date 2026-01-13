@@ -12,7 +12,10 @@ If you joined here from !project on twitch, heres the complete breakdown of what
 
 ## Stream event log
 
-### Further refactoring, creating a dynamic metric attribute for eventid 13/01/2026
+### Typedict awareness, fixture scope 13/01/2026
+    - I need to verify the dictionary is correct. didnt think about that, I just thought about testing it can be stored as an object or dictionary only. quackers told me about the typedict module
+    - given how fixtures work, and their potential length/complexity, seperating them as fixtures is a good test standard. seperated fixtures from the tests
+### Further refactoring, creating a dynamic metric attribute for eventid 12/01/2026
     - I have realised the need for metric to be both an object and a dictionary for eventid. maybe I need to store it as a simple dictionary? Maybe I need it as an object for greater analytics. by allowing both It enables scaleability.
     - seperated some of the tests in files
 

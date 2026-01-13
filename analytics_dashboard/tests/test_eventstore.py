@@ -6,6 +6,35 @@ import json
 
 from src.models.eventstore import Event_store
 
+@pytest.fixture
+def youtube_event():
+    path = Path(__file__).resolve().parent.parent/"data"/"youtube_abc123_2026-01-01.json"
+    content = path.read_text(encoding="utf-8")
+    data = json.loads(content)
+
+
+    vid_snapshot = Eventid(
+            platform=data.get("platform"),
+            content_id=data.get("content_id"),
+            timestamp=data.get("timestamp"),
+        )
+
+    #storing the dictionary on youtube event as dictionary
+    metric_data = data.get("metrics",{})
+    
+
+    #storing the metric dictionary on youtube event as an object
+    metric = Metric(
+            views=data.get("views"),
+            likes=data.get("likes"),
+            subscribers=data.get("subscribers"),
+            comments=data.get("comments"),
+        )
+
+    #add metric to event
+    youtube_snapshot.metric_add(metric)
+
+
 
 def test_eventstore():
 
