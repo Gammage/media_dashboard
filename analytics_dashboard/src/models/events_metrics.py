@@ -3,7 +3,7 @@ from datetime import datetime
 class Eventid:
     """define what happened"""
 
-    def __init__(self, platform=None, content_id=None, timestamp=None):
+    def __init__(self, platform=None, content_id=None, metrics_obj=None, timestamp=None):
         """define event attributes"""
 
         self.platform = platform
@@ -11,12 +11,18 @@ class Eventid:
 
         #self.metrics has to be a dictionary. think about how we reference this data. views(key) has a number(int or str idk yet)
         self.metrics = {} #a dictionary of metrics 
+        self.metrics_obj = None
         self.timestamp = timestamp
 
+        if metrics_obj:
+            self.metric_add(metrics_obj)
+
     def metric_add(self, metric):
-        """includes the metrics that come with the event"""
+        """stores metric as an OBJECT. Note: the eventid class can store metrics as Json and/or dict"""
         metric.event = self # link back to this Eventid
         
+        self.metrics_obj= metric
+        #loop through metric
         for key, value in vars(metric).items():
             if key != "event" and value is not None:
                 self.metrics[key] = value
