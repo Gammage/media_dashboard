@@ -12,6 +12,10 @@ If you joined here from !project on twitch, heres the complete breakdown of what
 
 ## Stream event log
 
+### Further refactoring, creating a dynamic metric attribute for eventid 13/01/2026
+    - I have realised the need for metric to be both an object and a dictionary for eventid. maybe I need to store it as a simple dictionary? Maybe I need it as an object for greater analytics. by allowing both It enables scaleability.
+    - seperated some of the tests in files
+
 ### Remembering Fixtures, Refactoring tests, modifying class scope 09/01/2026
     - this is a big one. so I had forgotten fixtures, which enables to store functions to be used across test functions. 
     - refactoring my test files to be DRY. That is, tests are assertions only. seperate test file for each api, then eventually a test file for all of them
